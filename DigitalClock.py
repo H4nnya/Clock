@@ -21,6 +21,7 @@ while open_screen:
     second = f'{datetime.now().second}'
     screen.fill(0)
     sprite('background.png', 0, 0)
+    
     if len(hour) == 2:
         sprite(f'{hour[0]}.png', 60, 250)
         sprite(f'{hour[1]}.png', 140, 250)
@@ -45,6 +46,7 @@ while open_screen:
         sprite(f's{second[0]}.png', 485, 252)
 
     pygame.display.update()
+    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             open_screen = False
